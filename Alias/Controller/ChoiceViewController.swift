@@ -16,15 +16,19 @@ class ChoiceViewController: UIViewController {
     }
     
     @IBAction func choiceOne(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToChoice", sender: self)
     }
 
     @IBAction func choiceSecond(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToChoice", sender: self)
     }
 
     @IBAction func choiceThird(_ sender: Any) {
+        performSegue(withIdentifier: "goToChoice", sender: self)
     }
 
     @IBAction func choiceFour(_ sender: Any) {
+        performSegue(withIdentifier: "goToChoice", sender: self)
     }
 
     /*

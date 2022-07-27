@@ -174,7 +174,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="choiceTwo:" destination="aZJ-0W-o10" eventType="touchUpInside" id="OBc-Eu-YBe"/>
+                                    <action selector="choiceSecond:" destination="aZJ-0W-o10" eventType="touchUpInside" id="sr8-5B-afU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ow-41-WNV">
@@ -212,7 +212,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="ZBQ-7G-vIX" kind="presentation" id="z3e-h9-KdO"/>
+                        <segue destination="ZBQ-7G-vIX" kind="presentation" identifier="goToChoice" id="z3e-h9-KdO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TF3-mR-whA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
