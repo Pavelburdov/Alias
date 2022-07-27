@@ -35,6 +35,10 @@
                                     <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="presse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Tn-ED-liX"/>
+                                    <action selector="rulesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2l8-oO-aRc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-bO-h8X" userLabel="Новая игра">
                                 <rect key="frame" x="58" y="698" width="299" height="77"/>
@@ -47,6 +51,9 @@
                                     <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="playGamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILj-a1-bNI"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t73-Ff-rIy">
                                 <rect key="frame" x="87" y="357" width="240" height="248"/>
@@ -62,7 +69,7 @@
                         <outlet property="newGameButton" destination="Y7C-bO-h8X" id="Lug-jd-cL5"/>
                         <outlet property="readRulesButton" destination="oIZ-95-fjl" id="M1F-xa-47l"/>
                         <segue destination="aZJ-0W-o10" kind="presentation" id="oUL-4f-el5"/>
-                        <segue destination="TDX-Hx-9vR" kind="presentation" id="MB5-yr-oB7"/>
+                        <segue destination="TDX-Hx-9vR" kind="presentation" identifier="goToRules" id="MB5-yr-oB7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
