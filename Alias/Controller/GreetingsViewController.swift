@@ -26,6 +26,8 @@ class GreetingsViewController: UIViewController {
     }
 
     @IBAction func playGameButtonPressed(_ sender: UIButton) {
+
+        performSegue(withIdentifier: "goToGames", sender: self)
     }
 
     @IBAction func rulesButtonPressed(_ sender: UIButton) {

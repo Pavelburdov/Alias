@@ -15,6 +15,17 @@ class ChoiceViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func choiceOne(_ sender: UIButton) {
+    }
+
+    @IBAction func choiceSecond(_ sender: UIButton) {
+    }
+
+    @IBAction func choiceThird(_ sender: Any) {
+    }
+
+    @IBAction func choiceFour(_ sender: Any) {
+    }
 
     /*
     // MARK: - Navigation

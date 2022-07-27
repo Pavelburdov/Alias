@@ -9,7 +9,7 @@ import UIKit
 
 class RulesViewController: UIViewController {
 
-    var rules = """
+    let rules = """
     Alias: Cкажи иначе
     В игру играют командами из двух и более человек. Задача каждого игрока команды - объяснить как можно больше слов отображаемых на экране за ограниченное время, другими словами, используя, например синонимы, антонимы и подсказки так чтобы члены вашей команды смогли отгадать как можно больше слов прежде чем истечет время. Чем больше слов отгадала команда, тем больше она заработала баллов.
 
@@ -24,6 +24,8 @@ class RulesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         rulesText.text = rules
+        rulesText.isEditable = false
+        
         // Do any additional setup after loading the view.
     }
     

@@ -36,7 +36,6 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="presse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Tn-ED-liX"/>
                                     <action selector="rulesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2l8-oO-aRc"/>
                                 </connections>
                             </button>
@@ -52,7 +51,7 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="playGamePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILj-a1-bNI"/>
+                                    <action selector="playGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fca-fL-Y0d"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t73-Ff-rIy">
@@ -68,7 +67,7 @@
                         <outlet property="imageLogo" destination="t73-Ff-rIy" id="JF5-Vf-QuA"/>
                         <outlet property="newGameButton" destination="Y7C-bO-h8X" id="Lug-jd-cL5"/>
                         <outlet property="readRulesButton" destination="oIZ-95-fjl" id="M1F-xa-47l"/>
-                        <segue destination="aZJ-0W-o10" kind="presentation" id="oUL-4f-el5"/>
+                        <segue destination="aZJ-0W-o10" kind="presentation" identifier="goToGames" id="oUL-4f-el5"/>
                         <segue destination="TDX-Hx-9vR" kind="presentation" identifier="goToRules" id="MB5-yr-oB7"/>
                     </connections>
                 </viewController>
@@ -135,7 +134,7 @@
         <!--Choice View Controller-->
         <scene sceneID="H0P-Yb-mFF">
             <objects>
-                <viewController id="aZJ-0W-o10" userLabel="Choice View Controller" sceneMemberID="viewController">
+                <viewController id="aZJ-0W-o10" userLabel="Choice View Controller" customClass="ChoiceViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S4u-a9-9sG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,6 +158,9 @@
                                     <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="choiceOne:" destination="aZJ-0W-o10" eventType="touchUpInside" id="2XK-kD-JyO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6R-cW-s2X">
                                 <rect key="frame" x="58" y="429" width="299" height="77"/>
@@ -171,6 +173,9 @@
                                     <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="choiceTwo:" destination="aZJ-0W-o10" eventType="touchUpInside" id="OBc-Eu-YBe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ow-41-WNV">
                                 <rect key="frame" x="58" y="514" width="299" height="77"/>
@@ -183,6 +188,9 @@
                                     <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="choiceThird:" destination="aZJ-0W-o10" eventType="touchUpInside" id="Kvz-fL-tQJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZW-Iy-G55">
                                 <rect key="frame" x="58" y="599" width="299" height="77"/>
@@ -195,6 +203,9 @@
                                     <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="choiceFour:" destination="aZJ-0W-o10" eventType="touchUpInside" id="9Td-Ac-utJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="foZ-GZ-cnT"/>
