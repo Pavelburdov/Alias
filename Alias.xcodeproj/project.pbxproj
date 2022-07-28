@@ -89,8 +89,8 @@
 			children = (
 				117E98AB288FFD6B00150694 /* GreetingsViewController.swift */,
 				F6BBF8962891572A00920FF3 /* ChoiceViewController.swift */,
-				F6BBF8982891577300920FF3 /* RulesViewController.swift */,
 				F604A4112892C2DB00D7E867 /* GameViewController.swift */,
+				F6BBF8982891577300920FF3 /* RulesViewController.swift */,
 				F604A4132892C54200D7E867 /* JokeViewController.swift */,
 			);
 			path = Controller;
