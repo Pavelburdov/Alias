@@ -13,6 +13,8 @@
 		117E98AF288FFD6B00150694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117E98AD288FFD6B00150694 /* Main.storyboard */; };
 		117E98B1288FFD6C00150694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117E98B0288FFD6C00150694 /* Assets.xcassets */; };
 		117E98B4288FFD6C00150694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117E98B2288FFD6C00150694 /* LaunchScreen.storyboard */; };
+		F604A4122892C2DB00D7E867 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604A4112892C2DB00D7E867 /* GameViewController.swift */; };
+		F604A4142892C54200D7E867 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604A4132892C54200D7E867 /* JokeViewController.swift */; };
 		F6BBF8972891572A00920FF3 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF8962891572A00920FF3 /* ChoiceViewController.swift */; };
 		F6BBF8992891577300920FF3 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF8982891577300920FF3 /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +28,8 @@
 		117E98B0288FFD6C00150694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		117E98B3288FFD6C00150694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		117E98B5288FFD6C00150694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F604A4112892C2DB00D7E867 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F604A4132892C54200D7E867 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 		F6BBF8962891572A00920FF3 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		F6BBF8982891577300920FF3 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +90,8 @@
 				117E98AB288FFD6B00150694 /* GreetingsViewController.swift */,
 				F6BBF8962891572A00920FF3 /* ChoiceViewController.swift */,
 				F6BBF8982891577300920FF3 /* RulesViewController.swift */,
+				F604A4112892C2DB00D7E867 /* GameViewController.swift */,
+				F604A4132892C54200D7E867 /* JokeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,9 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6BBF8992891577300920FF3 /* RulesViewController.swift in Sources */,
+				F604A4142892C54200D7E867 /* JokeViewController.swift in Sources */,
 				117E98AC288FFD6B00150694 /* GreetingsViewController.swift in Sources */,
 				117E98A8288FFD6B00150694 /* AppDelegate.swift in Sources */,
 				117E98AA288FFD6B00150694 /* SceneDelegate.swift in Sources */,
+				F604A4122892C2DB00D7E867 /* GameViewController.swift in Sources */,
 				F6BBF8972891572A00920FF3 /* ChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

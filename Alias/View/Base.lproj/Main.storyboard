@@ -222,7 +222,7 @@
         <!--Game View Controller-->
         <scene sceneID="fLL-4e-K1U">
             <objects>
-                <viewController id="ZBQ-7G-vIX" userLabel="Game View Controller" sceneMemberID="viewController">
+                <viewController id="ZBQ-7G-vIX" userLabel="Game View Controller" customClass="GameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nh5-Dy-KKa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
