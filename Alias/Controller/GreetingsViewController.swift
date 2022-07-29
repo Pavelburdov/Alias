@@ -21,7 +21,7 @@ class GreetingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        aliasGame.text = "Alias"
+        //aliasGame.text = "Alias"
         imageLogo.image = #imageLiteral(resourceName: "pict1")
     }
 
