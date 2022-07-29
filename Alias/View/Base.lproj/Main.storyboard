@@ -116,14 +116,16 @@
             <objects>
                 <viewController id="TDX-Hx-9vR" userLabel="Rules View Controller" customClass="RulesViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xiG-Rq-og8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1727"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfQ-pr-Mgy">
-                                <rect key="frame" x="20" y="44" width="374" height="1677.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Правила игры
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNy-XC-Ut9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1649"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfQ-pr-Mgy">
+                                        <rect key="frame" x="20" y="20" width="374" height="1609"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Правила игры
 
 Alias: Скажи иначе
 
@@ -208,21 +210,41 @@ Alias: Скажи иначе
 убедительным. Количество бонусных балов
 определяется случайно в интервале от 7 до
 10.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LfQ-pr-Mgy" secondAttribute="trailing" constant="20" id="Eqk-CP-ZHh"/>
+                                    <constraint firstItem="LfQ-pr-Mgy" firstAttribute="centerX" secondItem="zNy-XC-Ut9" secondAttribute="centerX" id="PcR-QL-4Ev"/>
+                                    <constraint firstItem="LfQ-pr-Mgy" firstAttribute="leading" secondItem="w9P-Qi-yBf" secondAttribute="leading" constant="20" id="ep8-iU-CsJ"/>
+                                    <constraint firstItem="LfQ-pr-Mgy" firstAttribute="top" secondItem="w9P-Qi-yBf" secondAttribute="top" constant="20" id="qQr-Cf-3HR"/>
+                                    <constraint firstAttribute="bottom" secondItem="LfQ-pr-Mgy" secondAttribute="bottom" constant="20" id="svj-wY-JGc"/>
+                                    <constraint firstItem="LfQ-pr-Mgy" firstAttribute="centerY" secondItem="zNy-XC-Ut9" secondAttribute="centerY" id="xr6-bQ-L85"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="UtZ-TQ-1xK"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="w9P-Qi-yBf"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fpu-m9-kY7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="top" secondItem="fpu-m9-kY7" secondAttribute="top" id="4ut-hJ-XQy"/>
+                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="leading" secondItem="fpu-m9-kY7" secondAttribute="leading" id="Ozb-pz-T7T"/>
+                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="trailing" secondItem="fpu-m9-kY7" secondAttribute="trailing" id="R8u-BF-aou"/>
+                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="bottom" secondItem="fpu-m9-kY7" secondAttribute="bottom" id="aMB-MR-NNL"/>
+                            <constraint firstItem="LfQ-pr-Mgy" firstAttribute="width" secondItem="xiG-Rq-og8" secondAttribute="width" multiplier="0.903382" id="e8l-rN-zZA"/>
+                        </constraints>
                     </view>
+                    <size key="freeformSize" width="414" height="1727"/>
                     <connections>
                         <outlet property="rulesText" destination="LfQ-pr-Mgy" id="NFS-ra-IMj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4z-1v-SO0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="803.57142857142856"/>
+            <point key="canvasLocation" x="26" y="1696"/>
         </scene>
         <!--Choice View Controller-->
         <scene sceneID="H0P-Yb-mFF">
