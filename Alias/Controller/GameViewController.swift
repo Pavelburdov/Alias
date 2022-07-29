@@ -20,28 +20,23 @@ class GameViewController: UIViewController {
     }
 
     @objc func updateTime() {
-//        print(timeFormatted(secondReminder))
+        print(timeFormatted(secondReminder))
         if secondReminder != 0 {
             secondReminder -= 1
-//            DispatchQueue.main.async {
-//                self.secondLabel.text = String(format: "0%.1f", self.secondReminder)
-//            }
+            secondLabel.text = "\(secondReminder)"
         } else {
             endTimer()
         }
 
-
-    func endTimer() {
-        timer.invalidate()
-        
+        func endTimer() {
+            timer.invalidate()
+        }
     }
-    }
-    
 
-//    func timeFormatted(_ totalSeconds: Int) -> String {
-//        let seconds: Int = totalSeconds % 60
-//        return String(format: "0:%02d", seconds)
-//    }
+    func timeFormatted(_ totalSeconds: Int) -> String {
+        let seconds: Int = totalSeconds % 60
+        return String(format: "0:%02d", seconds)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +46,7 @@ class GameViewController: UIViewController {
     }
     
     
-
+    
     /*
      // MARK: - Navigation
 
