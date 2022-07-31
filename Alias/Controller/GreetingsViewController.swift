@@ -18,13 +18,19 @@ class GreetingsViewController: UIViewController {
 
     @IBOutlet weak var readRulesButton: UIButton!
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //aliasGame.text = "Alias"
         imageLogo.image = #imageLiteral(resourceName: "pict1")
+        
     }
 
+
+    
     @IBAction func playGameButtonPressed(_ sender: UIButton) {
 
         performSegue(withIdentifier: "goToGames", sender: self)

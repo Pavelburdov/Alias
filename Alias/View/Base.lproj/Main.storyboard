@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o5W-fX-ymO">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="Greetings View Controller" customClass="GreetingsViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="v4W-A0-BLN">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="As9-me-gXR" userLabel="TopView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="408.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="261.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pict1" translatesAutoresizingMaskIntoConstraints="NO" id="t73-Ff-rIy">
-                                                <rect key="frame" x="95" y="115" width="224" height="178.5"/>
+                                                <rect key="frame" x="48" y="41.5" width="224" height="178.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="t73-Ff-rIy" secondAttribute="height" multiplier="161:128" id="0HT-l4-Abi"/>
                                                     <constraint firstAttribute="width" secondItem="t73-Ff-rIy" secondAttribute="height" multiplier="35:32" constant="29.235294117647072" id="DcF-z5-gOW"/>
@@ -36,10 +36,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOl-fv-FPk" userLabel="BottomView">
-                                        <rect key="frame" x="0.0" y="409.5" width="414" height="408.5"/>
+                                        <rect key="frame" x="0.0" y="262.5" width="320" height="261.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-od-W8m">
-                                                <rect key="frame" x="57" y="127" width="300" height="155"/>
+                                                <rect key="frame" x="10" y="53.5" width="300" height="155"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-bO-h8X" userLabel="Новая игра">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="60.5"/>
@@ -47,8 +47,8 @@
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="tvh-FK-ElY"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Новая игра">
-                                                            <backgroundConfiguration key="background">
+                                                        <buttonConfiguration key="configuration" style="plain" title="Новая игра" cornerStyle="dynamic">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
                                                             <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
@@ -64,8 +64,8 @@
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Keq-3U-TeD"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Прочитать правила">
-                                                            <backgroundConfiguration key="background">
+                                                        <buttonConfiguration key="configuration" style="plain" title="Прочитать правила" cornerStyle="dynamic">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
                                                             <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
@@ -99,17 +99,18 @@
                             <constraint firstItem="v4W-A0-BLN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cct-WA-VSf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="KMn-HG-dtp"/>
                     <connections>
                         <outlet property="imageLogo" destination="t73-Ff-rIy" id="JF5-Vf-QuA"/>
-                        <outlet property="newGameButton" destination="Y7C-bO-h8X" id="Lug-jd-cL5"/>
+                        <outlet property="newGameButton" destination="Y7C-bO-h8X" id="ybG-dT-x1H"/>
                         <outlet property="readRulesButton" destination="oIZ-95-fjl" id="M1F-xa-47l"/>
-                        <segue destination="aZJ-0W-o10" kind="presentation" identifier="goToGames" modalPresentationStyle="fullScreen" id="oUL-4f-el5"/>
-                        <segue destination="TDX-Hx-9vR" kind="presentation" identifier="goToRules" modalPresentationStyle="fullScreen" id="MB5-yr-oB7"/>
+                        <segue destination="aZJ-0W-o10" kind="show" identifier="goToGames" id="oUL-4f-el5"/>
+                        <segue destination="TDX-Hx-9vR" kind="show" identifier="goToRules" id="MB5-yr-oB7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27.536231884057973" y="68.973214285714278"/>
+            <point key="canvasLocation" x="937.68115942028987" y="68.973214285714278"/>
         </scene>
         <!--Rules View Controller-->
         <scene sceneID="HDB-Eq-8bc">
@@ -120,10 +121,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNy-XC-Ut9">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1649"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1683"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfQ-pr-Mgy">
-                                        <rect key="frame" x="20" y="20" width="374" height="1609"/>
+                                        <rect key="frame" x="20" y="20" width="374" height="1643"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Правила игры
 
@@ -237,6 +238,7 @@ Alias: Скажи иначе
                             <constraint firstItem="LfQ-pr-Mgy" firstAttribute="width" secondItem="xiG-Rq-og8" secondAttribute="width" multiplier="0.903382" id="e8l-rN-zZA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GRf-Bo-plb"/>
                     <size key="freeformSize" width="414" height="1727"/>
                     <connections>
                         <outlet property="rulesText" destination="LfQ-pr-Mgy" id="NFS-ra-IMj"/>
@@ -244,21 +246,21 @@ Alias: Скажи иначе
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4z-1v-SO0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26" y="1696"/>
+            <point key="canvasLocation" x="936" y="1289"/>
         </scene>
         <!--Choice View Controller-->
         <scene sceneID="H0P-Yb-mFF">
             <objects>
                 <viewController id="aZJ-0W-o10" userLabel="Choice View Controller" customClass="ChoiceViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S4u-a9-9sG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Hb3-4J-0x8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttK-nb-qAN" userLabel="TopView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="408"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="261"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="выберите  тему  карточек" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sqA-31-Rus">
                                                 <rect key="frame" x="57" y="160" width="300" height="89"/>
@@ -275,10 +277,10 @@ Alias: Скажи иначе
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiY-69-9VN" userLabel="ButtomView">
-                                        <rect key="frame" x="0.0" y="410" width="414" height="408"/>
+                                        <rect key="frame" x="0.0" y="263" width="320" height="261"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hXC-Mq-u2V">
-                                                <rect key="frame" x="57" y="68" width="300" height="272"/>
+                                                <rect key="frame" x="10" y="-5.5" width="300" height="272"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfE-9n-BG0">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="60.5"/>
@@ -286,8 +288,8 @@ Alias: Скажи иначе
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="SAs-rk-1h6"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Тема 1">
-                                                            <backgroundConfiguration key="background">
+                                                        <buttonConfiguration key="configuration" style="plain" title="Тема 1" cornerStyle="dynamic">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
                                                             <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
@@ -303,8 +305,8 @@ Alias: Скажи иначе
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="irL-lD-2vk"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Тема 2">
-                                                            <backgroundConfiguration key="background">
+                                                        <buttonConfiguration key="configuration" style="plain" title="Тема 2" cornerStyle="dynamic">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
                                                             <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
@@ -320,8 +322,8 @@ Alias: Скажи иначе
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="KFY-Ue-ddA"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Тема 3">
-                                                            <backgroundConfiguration key="background">
+                                                        <buttonConfiguration key="configuration" style="plain" title="Тема 3" cornerStyle="dynamic">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
                                                             <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
@@ -337,8 +339,8 @@ Alias: Скажи иначе
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="14g-jf-QLb"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Тема 4">
-                                                            <backgroundConfiguration key="background">
+                                                        <buttonConfiguration key="configuration" style="plain" title="Тема 4" cornerStyle="dynamic">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
                                                             <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
@@ -375,30 +377,31 @@ Alias: Скажи иначе
                             <constraint firstItem="Hb3-4J-0x8" firstAttribute="bottom" secondItem="foZ-GZ-cnT" secondAttribute="bottom" id="nW1-Q4-5HB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Hi1-B1-6wD"/>
                     <connections>
-                        <segue destination="ZBQ-7G-vIX" kind="presentation" identifier="goToChoice" modalPresentationStyle="fullScreen" id="z3e-h9-KdO"/>
+                        <segue destination="ZBQ-7G-vIX" kind="show" identifier="goToChoice" id="z3e-h9-KdO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TF3-mR-whA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.98550724637687" y="69.642857142857139"/>
+            <point key="canvasLocation" x="1739.1304347826087" y="69.642857142857139"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="fLL-4e-K1U">
             <objects>
                 <viewController id="ZBQ-7G-vIX" userLabel="Game View Controller" customClass="GameViewController" customModule="Alias" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nh5-Dy-KKa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="IWO-Ji-TDf">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvh-q3-glU" userLabel="TimerView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="189"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="115.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJf-5v-Vf9">
-                                                <rect key="frame" x="157" y="39" width="100" height="110.5"/>
+                                                <rect key="frame" x="110" y="2.5" width="100" height="110.5"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="100"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -411,7 +414,7 @@ Alias: Скажи иначе
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urB-u7-6QV" userLabel="WordView">
-                                        <rect key="frame" x="0.0" y="210" width="414" height="188.5"/>
+                                        <rect key="frame" x="0.0" y="136.5" width="320" height="115"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="слово" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="esu-Lz-Gfj">
                                                 <rect key="frame" x="87" y="61" width="240" height="66.5"/>
@@ -428,10 +431,10 @@ Alias: Скажи иначе
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-WP-8k8" userLabel="AnswerView">
-                                        <rect key="frame" x="0.0" y="419.5" width="414" height="189"/>
+                                        <rect key="frame" x="0.0" y="272.5" width="320" height="115.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uXn-NQ-z2v">
-                                                <rect key="frame" x="57" y="32.5" width="300" height="123.5"/>
+                                                <rect key="frame" x="10" y="-4" width="300" height="123.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Q9w-FT-1vD">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="60.5"/>
@@ -439,8 +442,8 @@ Alias: Скажи иначе
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="4aY-wQ-hoA"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Пропустить">
-                                                            <backgroundConfiguration key="background">
+                                                        <buttonConfiguration key="configuration" style="plain" title="Пропустить" cornerStyle="dynamic">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
                                                             <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
@@ -454,8 +457,8 @@ Alias: Скажи иначе
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gdF-VB-zpd"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Правильно">
-                                                            <backgroundConfiguration key="background">
+                                                        <buttonConfiguration key="configuration" style="plain" title="Правильно" cornerStyle="dynamic">
+                                                            <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
                                                             <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
@@ -472,13 +475,13 @@ Alias: Скажи иначе
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CxQ-Mc-E75" userLabel="CancelView">
-                                        <rect key="frame" x="0.0" y="629.5" width="414" height="188.5"/>
+                                        <rect key="frame" x="0.0" y="409" width="320" height="115"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtQ-pa-yZx">
                                                 <rect key="frame" x="58" y="56" width="299" height="77"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Сбросить">
-                                                    <backgroundConfiguration key="background">
+                                                <buttonConfiguration key="configuration" style="plain" title="Сбросить" cornerStyle="dynamic">
+                                                    <backgroundConfiguration key="background" cornerRadius="20">
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
@@ -505,13 +508,32 @@ Alias: Скажи иначе
                             <constraint firstItem="IWO-Ji-TDf" firstAttribute="bottom" secondItem="aJ1-sP-J7K" secondAttribute="bottom" id="pdx-Dz-4P8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jPV-3n-AhP"/>
                     <connections>
                         <outlet property="secondLabel" destination="yJf-5v-Vf9" id="0R8-12-sWi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCm-Wy-Wj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1631.8840579710147" y="69.642857142857139"/>
+            <point key="canvasLocation" x="2542.0289855072465" y="69.642857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="THy-zS-TGw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o5W-fX-ymO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N35-d6-KQ2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ckW-Ma-1cx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHB-H5-org" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27.536231884057973" y="68.973214285714278"/>
         </scene>
     </scenes>
     <resources>
