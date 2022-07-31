@@ -117,17 +117,64 @@
             <objects>
                 <viewController id="TDX-Hx-9vR" userLabel="Rules View Controller" customClass="RulesViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xiG-Rq-og8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1727"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1474"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNy-XC-Ut9">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1683"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1430"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfQ-pr-Mgy">
-                                        <rect key="frame" x="20" y="20" width="374" height="1643"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <string key="text">Правила игры
-
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skF-tU-r2z">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1430"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Правила" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNV-cD-Xzl" userLabel="rulesText">
+                                                <rect key="frame" x="8" y="0.0" width="398" height="1422"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.99981945750000001" green="0.97645872830000002" blue="0.94370281700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="XNV-cD-Xzl" firstAttribute="leading" secondItem="skF-tU-r2z" secondAttribute="leadingMargin" id="OIJ-0q-1P1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="XNV-cD-Xzl" firstAttribute="centerX" secondItem="zNy-XC-Ut9" secondAttribute="centerX" id="1dx-Vd-9Uj"/>
+                                    <constraint firstItem="skF-tU-r2z" firstAttribute="width" secondItem="zNy-XC-Ut9" secondAttribute="width" id="501-xl-aIJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="skF-tU-r2z" secondAttribute="bottom" id="9tO-Dt-9sL"/>
+                                    <constraint firstItem="skF-tU-r2z" firstAttribute="top" secondItem="zNy-XC-Ut9" secondAttribute="top" id="FK2-SG-zFC"/>
+                                    <constraint firstAttribute="trailing" secondItem="skF-tU-r2z" secondAttribute="trailing" id="Q9x-sl-PGX"/>
+                                    <constraint firstItem="skF-tU-r2z" firstAttribute="leading" secondItem="zNy-XC-Ut9" secondAttribute="leading" id="ULx-js-urb"/>
+                                    <constraint firstItem="XNV-cD-Xzl" firstAttribute="top" secondItem="zNy-XC-Ut9" secondAttribute="top" id="hjq-hD-wjB"/>
+                                    <constraint firstAttribute="bottom" secondItem="XNV-cD-Xzl" secondAttribute="bottom" constant="8" id="jag-fM-CCS"/>
+                                    <constraint firstItem="skF-tU-r2z" firstAttribute="height" secondItem="zNy-XC-Ut9" secondAttribute="height" priority="250" id="yp4-Mj-rZO"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="UtZ-TQ-1xK"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="w9P-Qi-yBf"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fpu-m9-kY7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="top" secondItem="fpu-m9-kY7" secondAttribute="top" id="4ut-hJ-XQy"/>
+                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="leading" secondItem="fpu-m9-kY7" secondAttribute="leading" id="Ozb-pz-T7T"/>
+                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="trailing" secondItem="fpu-m9-kY7" secondAttribute="trailing" id="R8u-BF-aou"/>
+                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="bottom" secondItem="fpu-m9-kY7" secondAttribute="bottom" id="aMB-MR-NNL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GRf-Bo-plb"/>
+                    <size key="freeformSize" width="414" height="1474"/>
+                    <connections>
+                        <outlet property="rulesText" destination="XNV-cD-Xzl" id="8Xt-j7-Zd6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j4z-1v-SO0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R9B-oW-fZh">
+                    <rect key="frame" x="0.0" y="0.0" width="368" height="1704.5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <string key="text">Правила игры
 Alias: Скажи иначе
 
 В игру играют командами из двух или более
@@ -211,42 +258,12 @@ Alias: Скажи иначе
 убедительным. Количество бонусных балов
 определяется случайно в интервале от 7 до
 10.</string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="LfQ-pr-Mgy" secondAttribute="trailing" constant="20" id="Eqk-CP-ZHh"/>
-                                    <constraint firstItem="LfQ-pr-Mgy" firstAttribute="centerX" secondItem="zNy-XC-Ut9" secondAttribute="centerX" id="PcR-QL-4Ev"/>
-                                    <constraint firstItem="LfQ-pr-Mgy" firstAttribute="leading" secondItem="w9P-Qi-yBf" secondAttribute="leading" constant="20" id="ep8-iU-CsJ"/>
-                                    <constraint firstItem="LfQ-pr-Mgy" firstAttribute="top" secondItem="w9P-Qi-yBf" secondAttribute="top" constant="20" id="qQr-Cf-3HR"/>
-                                    <constraint firstAttribute="bottom" secondItem="LfQ-pr-Mgy" secondAttribute="bottom" constant="20" id="svj-wY-JGc"/>
-                                    <constraint firstItem="LfQ-pr-Mgy" firstAttribute="centerY" secondItem="zNy-XC-Ut9" secondAttribute="centerY" id="xr6-bQ-L85"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="UtZ-TQ-1xK"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="w9P-Qi-yBf"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="fpu-m9-kY7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="top" secondItem="fpu-m9-kY7" secondAttribute="top" id="4ut-hJ-XQy"/>
-                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="leading" secondItem="fpu-m9-kY7" secondAttribute="leading" id="Ozb-pz-T7T"/>
-                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="trailing" secondItem="fpu-m9-kY7" secondAttribute="trailing" id="R8u-BF-aou"/>
-                            <constraint firstItem="zNy-XC-Ut9" firstAttribute="bottom" secondItem="fpu-m9-kY7" secondAttribute="bottom" id="aMB-MR-NNL"/>
-                            <constraint firstItem="LfQ-pr-Mgy" firstAttribute="width" secondItem="xiG-Rq-og8" secondAttribute="width" multiplier="0.903382" id="e8l-rN-zZA"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="GRf-Bo-plb"/>
-                    <size key="freeformSize" width="414" height="1727"/>
-                    <connections>
-                        <outlet property="rulesText" destination="LfQ-pr-Mgy" id="NFS-ra-IMj"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="j4z-1v-SO0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
-            <point key="canvasLocation" x="936" y="1289"/>
+            <point key="canvasLocation" x="937.5" y="1343.661971830986"/>
         </scene>
         <!--Choice View Controller-->
         <scene sceneID="H0P-Yb-mFF">
