@@ -281,7 +281,7 @@ Alias: Скажи иначе
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttK-nb-qAN" userLabel="TopView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="166"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="На какую тему будут слова?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sqA-31-Rus">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="На какую тему выберите слова?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqA-31-Rus" userLabel="Question Text View">
                                                 <rect key="frame" x="10" y="37.5" width="300" height="91"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="91" id="MAC-a8-NHf"/>
@@ -293,7 +293,7 @@ Alias: Скажи иначе
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="sqA-31-Rus" firstAttribute="leading" secondItem="ttK-nb-qAN" secondAttribute="leading" constant="10" id="26t-Za-1UZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="sqA-31-Rus" secondAttribute="trailing" constant="10" id="2pa-db-b1F"/>
+                                            <constraint firstItem="sqA-31-Rus" firstAttribute="trailing" secondItem="ttK-nb-qAN" secondAttribute="trailing" constant="-10" id="2pa-db-b1F"/>
                                             <constraint firstItem="sqA-31-Rus" firstAttribute="centerY" secondItem="ttK-nb-qAN" secondAttribute="centerY" id="DLl-5g-MhR"/>
                                         </constraints>
                                     </view>
@@ -426,11 +426,11 @@ Alias: Скажи иначе
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-nw-CY1">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rvh-q3-glU" userLabel="TimerView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvh-q3-glU" userLabel="TimerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0yE-0P-VBM">
-                                                <rect key="frame" x="100" y="8" width="120" height="78"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0yE-0P-VBM">
+                                                <rect key="frame" x="100" y="16" width="120" height="78"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJf-5v-Vf9">
                                                         <rect key="frame" x="0.0" y="0.0" width="70" height="78"/>
@@ -447,63 +447,67 @@ Alias: Скажи иначе
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <color key="tintColor" systemColor="linkColor"/>
                                         <constraints>
-                                            <constraint firstItem="0yE-0P-VBM" firstAttribute="centerY" secondItem="rvh-q3-glU" secondAttribute="centerY" id="Jj5-Q0-hkt"/>
-                                            <constraint firstItem="0yE-0P-VBM" firstAttribute="leading" secondItem="rvh-q3-glU" secondAttribute="leading" constant="100" id="VnV-hO-bRU"/>
-                                            <constraint firstAttribute="trailing" secondItem="0yE-0P-VBM" secondAttribute="trailing" constant="100" id="zBN-iD-fDM"/>
+                                            <constraint firstItem="0yE-0P-VBM" firstAttribute="centerX" secondItem="rvh-q3-glU" secondAttribute="centerX" id="9j5-14-RfU"/>
+                                            <constraint firstItem="0yE-0P-VBM" firstAttribute="centerY" secondItem="rvh-q3-glU" secondAttribute="centerY" id="UcB-wO-gp9"/>
+                                            <constraint firstAttribute="height" constant="110" id="mj2-i5-e1H"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="urB-u7-6QV" userLabel="WordView">
-                                        <rect key="frame" x="0.0" y="102" width="320" height="78"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urB-u7-6QV" userLabel="WordView">
+                                        <rect key="frame" x="0.0" y="118" width="320" height="102"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdW-If-knH">
-                                                <rect key="frame" x="121" y="22" width="79" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="a78-5j-e5A"/>
-                                                    <constraint firstAttribute="width" constant="80" id="bbC-Sb-VMf"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdW-If-knH" userLabel="Word">
+                                                <rect key="frame" x="107.5" y="29" width="105.5" height="44.5"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="40"/>
+                                                <color key="textColor" red="0.99797862768173218" green="0.035748671740293503" blue="0.035785406827926636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemTealColor"/>
                                         <color key="tintColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ZdW-If-knH" firstAttribute="centerY" secondItem="urB-u7-6QV" secondAttribute="centerY" id="MTM-Br-0AR"/>
+                                            <constraint firstItem="ZdW-If-knH" firstAttribute="centerX" secondItem="urB-u7-6QV" secondAttribute="centerX" id="wUE-Aq-mxw"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Go-Jk-E53" userLabel="Points View">
-                                        <rect key="frame" x="0.0" y="188" width="320" height="50"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Go-Jk-E53" userLabel="Points View">
+                                        <rect key="frame" x="0.0" y="228" width="320" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Всего очков:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRI-uL-cii">
-                                                <rect key="frame" x="93" y="17" width="81" height="17"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htz-Sg-HWd">
-                                                <rect key="frame" x="178" y="12" width="49" height="23"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-WP-8k8" userLabel="AnswerView">
-                                        <rect key="frame" x="0.0" y="246" width="320" height="162"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uXn-NQ-z2v">
-                                                <rect key="frame" x="10" y="23" width="300" height="130"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Stu-HN-pgq">
+                                                <rect key="frame" x="93.5" y="14" width="133.5" height="22.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Q9w-FT-1vD">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Всего очков:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRI-uL-cii" userLabel="Total scores">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="22.5"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htz-Sg-HWd" userLabel="Points">
+                                                        <rect key="frame" x="84.5" y="0.0" width="49" height="22.5"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Stu-HN-pgq" firstAttribute="centerX" secondItem="2Go-Jk-E53" secondAttribute="centerX" id="46E-gn-GY6"/>
+                                            <constraint firstItem="Stu-HN-pgq" firstAttribute="centerY" secondItem="2Go-Jk-E53" secondAttribute="centerY" id="GrD-kd-pid"/>
+                                            <constraint firstAttribute="height" constant="50" id="kcG-Kl-dyJ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-WP-8k8" userLabel="AnswerView">
+                                        <rect key="frame" x="0.0" y="286" width="320" height="150"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uXn-NQ-z2v">
+                                                <rect key="frame" x="10" y="10" width="300" height="130"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Q9w-FT-1vD" userLabel="Skip">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="4aY-wQ-hoA"/>
                                                             <constraint firstAttribute="height" constant="50" id="Yra-ty-C2M"/>
-                                                            <constraint firstAttribute="width" constant="300" id="bmr-9F-lsH"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Пропустить" cornerStyle="dynamic">
@@ -515,12 +519,11 @@ Alias: Скажи иначе
                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnO-5t-MCU">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnO-5t-MCU" userLabel="Correct">
                                                         <rect key="frame" x="0.0" y="80" width="300" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="ZO8-Cs-pdq"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gdF-VB-zpd"/>
-                                                            <constraint firstAttribute="width" constant="300" id="uTd-du-xgo"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Правильно" cornerStyle="dynamic">
@@ -534,16 +537,19 @@ Alias: Скажи иначе
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstItem="uXn-NQ-z2v" firstAttribute="centerY" secondItem="Enh-WP-8k8" secondAttribute="centerY" id="0AO-1N-Los"/>
+                                            <constraint firstItem="uXn-NQ-z2v" firstAttribute="centerX" secondItem="Enh-WP-8k8" secondAttribute="centerX" id="0sb-hR-9qc"/>
+                                            <constraint firstAttribute="height" constant="150" id="BGp-vf-uAa"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CxQ-Mc-E75" userLabel="CancelView">
-                                        <rect key="frame" x="0.0" y="416" width="320" height="108"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CxQ-Mc-E75" userLabel="CancelView">
+                                        <rect key="frame" x="0.0" y="444" width="320" height="80"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtQ-pa-yZx">
-                                                <rect key="frame" x="10" y="29" width="300" height="50"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtQ-pa-yZx" userLabel="Cancel">
+                                                <rect key="frame" x="10" y="16.5" width="300" height="47.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="NFr-71-RiZ"/>
-                                                    <constraint firstAttribute="height" constant="50" id="oqR-bm-ZHV"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="NFr-71-RiZ"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Сбросить" cornerStyle="dynamic">
@@ -555,12 +561,16 @@ Alias: Скажи иначе
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <constraints>
+                                            <constraint firstItem="CtQ-pa-yZx" firstAttribute="centerY" secondItem="CxQ-Mc-E75" secondAttribute="centerY" id="TJJ-wp-K5T"/>
+                                            <constraint firstItem="CtQ-pa-yZx" firstAttribute="centerX" secondItem="CxQ-Mc-E75" secondAttribute="centerX" id="jK5-mA-d9G"/>
+                                            <constraint firstAttribute="height" constant="80" id="tWa-Yj-CnO"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="rvh-q3-glU" firstAttribute="top" secondItem="d6f-nw-CY1" secondAttribute="top" id="XxN-Ec-jpy"/>
-                                    <constraint firstItem="rvh-q3-glU" firstAttribute="centerX" secondItem="d6f-nw-CY1" secondAttribute="centerX" id="sJc-mD-OwT"/>
+                                    <constraint firstItem="CxQ-Mc-E75" firstAttribute="centerX" secondItem="d6f-nw-CY1" secondAttribute="centerX" id="kIu-cS-hqI"/>
+                                    <constraint firstItem="CxQ-Mc-E75" firstAttribute="bottom" secondItem="d6f-nw-CY1" secondAttribute="bottom" id="n8k-GG-bTo"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -568,10 +578,10 @@ Alias: Скажи иначе
                         <color key="backgroundColor" red="0.99981945750000001" green="0.97645872830000002" blue="0.94370281700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <constraints>
-                            <constraint firstItem="d6f-nw-CY1" firstAttribute="trailing" secondItem="aJ1-sP-J7K" secondAttribute="trailing" id="65h-Y2-ASF"/>
-                            <constraint firstItem="d6f-nw-CY1" firstAttribute="leading" secondItem="aJ1-sP-J7K" secondAttribute="leading" id="AQ9-is-MtN"/>
-                            <constraint firstItem="d6f-nw-CY1" firstAttribute="top" secondItem="aJ1-sP-J7K" secondAttribute="top" id="GTw-We-mAh"/>
-                            <constraint firstAttribute="bottom" secondItem="d6f-nw-CY1" secondAttribute="bottom" id="ZQ4-Dd-beS"/>
+                            <constraint firstItem="d6f-nw-CY1" firstAttribute="leading" secondItem="aJ1-sP-J7K" secondAttribute="leading" id="Vn3-AI-cLp"/>
+                            <constraint firstItem="d6f-nw-CY1" firstAttribute="trailing" secondItem="aJ1-sP-J7K" secondAttribute="trailing" id="fAN-5C-zAh"/>
+                            <constraint firstItem="d6f-nw-CY1" firstAttribute="top" secondItem="aJ1-sP-J7K" secondAttribute="top" id="fTO-2p-mrv"/>
+                            <constraint firstItem="d6f-nw-CY1" firstAttribute="bottom" secondItem="aJ1-sP-J7K" secondAttribute="bottom" id="pOh-he-fEd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jPV-3n-AhP"/>
@@ -610,23 +620,8 @@ Alias: Скажи иначе
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

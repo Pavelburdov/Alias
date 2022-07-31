@@ -13,6 +13,8 @@
 		117E98AF288FFD6B00150694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117E98AD288FFD6B00150694 /* Main.storyboard */; };
 		117E98B1288FFD6C00150694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117E98B0288FFD6C00150694 /* Assets.xcassets */; };
 		117E98B4288FFD6C00150694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117E98B2288FFD6C00150694 /* LaunchScreen.storyboard */; };
+		909860B428971B8800046C34 /* launch_background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 909860B328971B8800046C34 /* launch_background.jpeg */; };
+		909860B628971D4D00046C34 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 909860B528971D4D00046C34 /* logo.png */; };
 		F604A4122892C2DB00D7E867 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604A4112892C2DB00D7E867 /* GameViewController.swift */; };
 		F604A4142892C54200D7E867 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604A4132892C54200D7E867 /* JokeViewController.swift */; };
 		F6BBF8972891572A00920FF3 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF8962891572A00920FF3 /* ChoiceViewController.swift */; };
@@ -28,6 +30,8 @@
 		117E98B0288FFD6C00150694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		117E98B3288FFD6C00150694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		117E98B5288FFD6C00150694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		909860B328971B8800046C34 /* launch_background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = launch_background.jpeg; path = ../../../../Downloads/launch_background.jpeg; sourceTree = "<group>"; };
+		909860B528971D4D00046C34 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
 		F604A4112892C2DB00D7E867 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F604A4132892C54200D7E867 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 		F6BBF8962891572A00920FF3 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +74,9 @@
 				117E98BC288FFD9500150694 /* Controller */,
 				117E98BB288FFD7900150694 /* View */,
 				117E98B0288FFD6C00150694 /* Assets.xcassets */,
+				909860B328971B8800046C34 /* launch_background.jpeg */,
 				117E98B2288FFD6C00150694 /* LaunchScreen.storyboard */,
+				909860B528971D4D00046C34 /* logo.png */,
 				117E98B5288FFD6C00150694 /* Info.plist */,
 			);
 			path = Alias;
@@ -161,6 +167,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909860B428971B8800046C34 /* launch_background.jpeg in Resources */,
+				909860B628971D4D00046C34 /* logo.png in Resources */,
 				117E98B4288FFD6C00150694 /* LaunchScreen.storyboard in Resources */,
 				117E98B1288FFD6C00150694 /* Assets.xcassets in Resources */,
 				117E98AF288FFD6B00150694 /* Main.storyboard in Resources */,
