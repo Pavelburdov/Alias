@@ -38,12 +38,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOl-fv-FPk" userLabel="BottomView">
                                         <rect key="frame" x="0.0" y="262.5" width="320" height="261.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-od-W8m">
-                                                <rect key="frame" x="10" y="53.5" width="300" height="155"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-od-W8m">
+                                                <rect key="frame" x="10" y="66" width="300" height="130"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-bO-h8X" userLabel="Новая игра">
-                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="60.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="QHg-ev-d3g"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="tvh-FK-ElY"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
@@ -51,7 +52,7 @@
                                                             <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
-                                                            <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -59,16 +60,17 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oIZ-95-fjl">
-                                                        <rect key="frame" x="0.0" y="94.5" width="300" height="60.5"/>
+                                                        <rect key="frame" x="0.0" y="80" width="300" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Keq-3U-TeD"/>
+                                                            <constraint firstAttribute="height" constant="50" id="kBi-SH-ZXW"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Прочитать правила" cornerStyle="dynamic">
                                                             <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
-                                                            <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -126,11 +128,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skF-tU-r2z">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1430"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Правила" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNV-cD-Xzl" userLabel="rulesText">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" editable="NO" text="Правила" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNV-cD-Xzl" userLabel="rulesText">
                                                 <rect key="frame" x="8" y="0.0" width="398" height="1422"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" red="0.99981945750000001" green="0.97645872830000002" blue="0.94370281700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
@@ -156,7 +158,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fpu-m9-kY7"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99981945750000001" green="0.97645872830000002" blue="0.94370281700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zNy-XC-Ut9" firstAttribute="top" secondItem="fpu-m9-kY7" secondAttribute="top" id="4ut-hJ-XQy"/>
                             <constraint firstItem="zNy-XC-Ut9" firstAttribute="leading" secondItem="fpu-m9-kY7" secondAttribute="leading" id="Ozb-pz-T7T"/>
@@ -273,43 +275,46 @@ Alias: Скажи иначе
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Hb3-4J-0x8">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hfS-UC-U24" userLabel="Main Stack View">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttK-nb-qAN" userLabel="TopView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="261"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="166"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="выберите  тему  карточек" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sqA-31-Rus">
-                                                <rect key="frame" x="57" y="160" width="300" height="89"/>
-                                                <color key="backgroundColor" red="0.99981945750000001" green="0.97645872830000002" blue="0.94370281700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="На какую тему будут слова?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sqA-31-Rus">
+                                                <rect key="frame" x="10" y="37.5" width="300" height="91"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="91" id="MAC-a8-NHf"/>
+                                                </constraints>
                                                 <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="sqA-31-Rus" firstAttribute="centerX" secondItem="ttK-nb-qAN" secondAttribute="centerX" id="e5s-sW-c5f"/>
-                                            <constraint firstItem="sqA-31-Rus" firstAttribute="centerY" secondItem="ttK-nb-qAN" secondAttribute="centerY" id="jfU-0s-A8G"/>
+                                            <constraint firstItem="sqA-31-Rus" firstAttribute="leading" secondItem="ttK-nb-qAN" secondAttribute="leading" constant="10" id="26t-Za-1UZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="sqA-31-Rus" secondAttribute="trailing" constant="10" id="2pa-db-b1F"/>
+                                            <constraint firstItem="sqA-31-Rus" firstAttribute="centerY" secondItem="ttK-nb-qAN" secondAttribute="centerY" id="DLl-5g-MhR"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiY-69-9VN" userLabel="ButtomView">
-                                        <rect key="frame" x="0.0" y="263" width="320" height="261"/>
+                                        <rect key="frame" x="0.0" y="174" width="320" height="350"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hXC-Mq-u2V">
-                                                <rect key="frame" x="10" y="-5.5" width="300" height="272"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hXC-Mq-u2V" userLabel="Buttom Stack View">
+                                                <rect key="frame" x="10" y="30" width="300" height="290"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfE-9n-BG0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="60.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="SAs-rk-1h6"/>
+                                                            <constraint firstAttribute="height" constant="50" id="qj5-tV-N5X"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Тема 1" cornerStyle="dynamic">
                                                             <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
-                                                            <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -317,8 +322,9 @@ Alias: Скажи иначе
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6R-cW-s2X">
-                                                        <rect key="frame" x="0.0" y="70.5" width="300" height="60.5"/>
+                                                        <rect key="frame" x="0.0" y="80" width="300" height="50"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="glS-Jj-oVm"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="irL-lD-2vk"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
@@ -326,7 +332,7 @@ Alias: Скажи иначе
                                                             <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
-                                                            <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -334,16 +340,17 @@ Alias: Скажи иначе
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ow-41-WNV">
-                                                        <rect key="frame" x="0.0" y="141" width="300" height="60.5"/>
+                                                        <rect key="frame" x="0.0" y="160" width="300" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="KFY-Ue-ddA"/>
+                                                            <constraint firstAttribute="height" constant="50" id="pq0-iu-pS4"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Тема 3" cornerStyle="dynamic">
                                                             <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
-                                                            <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -351,16 +358,17 @@ Alias: Скажи иначе
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZW-Iy-G55">
-                                                        <rect key="frame" x="0.0" y="211.5" width="300" height="60.5"/>
+                                                        <rect key="frame" x="0.0" y="240" width="300" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="14g-jf-QLb"/>
+                                                            <constraint firstAttribute="height" constant="50" id="mrA-5m-Qfd"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Тема 4" cornerStyle="dynamic">
                                                             <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
-                                                            <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -376,22 +384,26 @@ Alias: Скажи иначе
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="hXC-Mq-u2V" firstAttribute="centerX" secondItem="BiY-69-9VN" secondAttribute="centerX" id="fft-8U-TzO"/>
-                                            <constraint firstItem="hXC-Mq-u2V" firstAttribute="centerY" secondItem="BiY-69-9VN" secondAttribute="centerY" id="qEM-RP-tu8"/>
+                                            <constraint firstItem="hXC-Mq-u2V" firstAttribute="centerY" secondItem="BiY-69-9VN" secondAttribute="centerY" id="AC6-u3-qoD"/>
+                                            <constraint firstAttribute="height" constant="350" id="JMj-rN-QCK"/>
+                                            <constraint firstItem="hXC-Mq-u2V" firstAttribute="centerX" secondItem="BiY-69-9VN" secondAttribute="centerX" id="z0L-FB-vKw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="BiY-69-9VN" firstAttribute="centerX" secondItem="hfS-UC-U24" secondAttribute="centerX" id="LQ6-86-cz2"/>
+                                    <constraint firstAttribute="bottom" secondItem="BiY-69-9VN" secondAttribute="bottom" id="tAC-N0-c4J"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="foZ-GZ-cnT"/>
                         <color key="backgroundColor" red="0.99981945750000001" green="0.97645872830000002" blue="0.94370281700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Hb3-4J-0x8" firstAttribute="leading" secondItem="foZ-GZ-cnT" secondAttribute="leading" id="MKR-BM-E9N"/>
-                            <constraint firstItem="Hb3-4J-0x8" firstAttribute="top" secondItem="foZ-GZ-cnT" secondAttribute="top" id="ZEa-O6-Jig"/>
-                            <constraint firstItem="Hb3-4J-0x8" firstAttribute="trailing" secondItem="foZ-GZ-cnT" secondAttribute="trailing" id="aQb-Rn-ulG"/>
-                            <constraint firstItem="Hb3-4J-0x8" firstAttribute="bottom" secondItem="foZ-GZ-cnT" secondAttribute="bottom" id="nW1-Q4-5HB"/>
+                            <constraint firstItem="hfS-UC-U24" firstAttribute="bottom" secondItem="foZ-GZ-cnT" secondAttribute="bottom" id="HkK-OZ-VUE"/>
+                            <constraint firstItem="hfS-UC-U24" firstAttribute="trailing" secondItem="foZ-GZ-cnT" secondAttribute="trailing" id="hAW-KT-KM1"/>
+                            <constraint firstItem="hfS-UC-U24" firstAttribute="top" secondItem="foZ-GZ-cnT" secondAttribute="top" id="iVf-h0-3aA"/>
+                            <constraint firstItem="hfS-UC-U24" firstAttribute="leading" secondItem="foZ-GZ-cnT" secondAttribute="leading" id="nUj-WU-1gT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hi1-B1-6wD"/>
@@ -401,7 +413,7 @@ Alias: Скажи иначе
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TF3-mR-whA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739.1304347826087" y="69.642857142857139"/>
+            <point key="canvasLocation" x="1747.5" y="68.661971830985919"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="fLL-4e-K1U">
@@ -411,118 +423,155 @@ Alias: Скажи иначе
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="IWO-Ji-TDf">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-nw-CY1">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvh-q3-glU" userLabel="TimerView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="115.5"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rvh-q3-glU" userLabel="TimerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJf-5v-Vf9">
-                                                <rect key="frame" x="110" y="2.5" width="100" height="110.5"/>
-                                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="100"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0yE-0P-VBM">
+                                                <rect key="frame" x="100" y="8" width="120" height="78"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJf-5v-Vf9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="78"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="70"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="сек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErZ-qq-og2" userLabel="Seconds Label">
+                                                        <rect key="frame" x="78" y="44.5" width="42" height="33.5"/>
+                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstItem="0yE-0P-VBM" firstAttribute="centerY" secondItem="rvh-q3-glU" secondAttribute="centerY" id="Jj5-Q0-hkt"/>
+                                            <constraint firstItem="0yE-0P-VBM" firstAttribute="leading" secondItem="rvh-q3-glU" secondAttribute="leading" constant="100" id="VnV-hO-bRU"/>
+                                            <constraint firstAttribute="trailing" secondItem="0yE-0P-VBM" secondAttribute="trailing" constant="100" id="zBN-iD-fDM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="urB-u7-6QV" userLabel="WordView">
+                                        <rect key="frame" x="0.0" y="102" width="320" height="78"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdW-If-knH">
+                                                <rect key="frame" x="121" y="22" width="79" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="a78-5j-e5A"/>
+                                                    <constraint firstAttribute="width" constant="80" id="bbC-Sb-VMf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99981945750000001" green="0.97645872830000002" blue="0.94370281700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="yJf-5v-Vf9" firstAttribute="centerX" secondItem="rvh-q3-glU" secondAttribute="centerX" id="nKG-BC-qQJ"/>
-                                            <constraint firstItem="yJf-5v-Vf9" firstAttribute="centerY" secondItem="rvh-q3-glU" secondAttribute="centerY" id="qS8-u0-XKd"/>
-                                        </constraints>
+                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                        <color key="tintColor" systemColor="linkColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urB-u7-6QV" userLabel="WordView">
-                                        <rect key="frame" x="0.0" y="136.5" width="320" height="115"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Go-Jk-E53" userLabel="Points View">
+                                        <rect key="frame" x="0.0" y="188" width="320" height="50"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="слово" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="esu-Lz-Gfj">
-                                                <rect key="frame" x="87" y="61" width="240" height="66.5"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                                            </textView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Всего очков:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRI-uL-cii">
+                                                <rect key="frame" x="93" y="17" width="81" height="17"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htz-Sg-HWd">
+                                                <rect key="frame" x="178" y="12" width="49" height="23"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99981945750000001" green="0.97645872830000002" blue="0.94370281700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="esu-Lz-Gfj" firstAttribute="centerY" secondItem="urB-u7-6QV" secondAttribute="centerY" id="HV8-UD-EUZ"/>
-                                            <constraint firstItem="esu-Lz-Gfj" firstAttribute="centerX" secondItem="urB-u7-6QV" secondAttribute="centerX" id="jdu-zF-aM3"/>
-                                        </constraints>
+                                        <color key="backgroundColor" systemColor="systemBrownColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-WP-8k8" userLabel="AnswerView">
-                                        <rect key="frame" x="0.0" y="272.5" width="320" height="115.5"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-WP-8k8" userLabel="AnswerView">
+                                        <rect key="frame" x="0.0" y="246" width="320" height="162"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uXn-NQ-z2v">
-                                                <rect key="frame" x="10" y="-4" width="300" height="123.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uXn-NQ-z2v">
+                                                <rect key="frame" x="10" y="23" width="300" height="130"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Q9w-FT-1vD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="60.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="4aY-wQ-hoA"/>
+                                                            <constraint firstAttribute="height" constant="50" id="Yra-ty-C2M"/>
+                                                            <constraint firstAttribute="width" constant="300" id="bmr-9F-lsH"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Пропустить" cornerStyle="dynamic">
                                                             <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
-                                                            <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                                            <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                             <attributedString key="attributedSubtitle"/>
                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnO-5t-MCU">
-                                                        <rect key="frame" x="0.0" y="70.5" width="300" height="53"/>
+                                                        <rect key="frame" x="0.0" y="80" width="300" height="50"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="ZO8-Cs-pdq"/>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gdF-VB-zpd"/>
+                                                            <constraint firstAttribute="width" constant="300" id="uTd-du-xgo"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Правильно" cornerStyle="dynamic">
                                                             <backgroundConfiguration key="background" cornerRadius="20">
                                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             </backgroundConfiguration>
-                                                            <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
+                                                            <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99981945750000001" green="0.97645872830000002" blue="0.94370281700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="uXn-NQ-z2v" firstAttribute="centerX" secondItem="Enh-WP-8k8" secondAttribute="centerX" id="Lew-Mc-vk1"/>
-                                            <constraint firstItem="uXn-NQ-z2v" firstAttribute="centerY" secondItem="Enh-WP-8k8" secondAttribute="centerY" id="lLi-Y0-WUg"/>
-                                        </constraints>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CxQ-Mc-E75" userLabel="CancelView">
-                                        <rect key="frame" x="0.0" y="409" width="320" height="115"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CxQ-Mc-E75" userLabel="CancelView">
+                                        <rect key="frame" x="0.0" y="416" width="320" height="108"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtQ-pa-yZx">
-                                                <rect key="frame" x="58" y="56" width="299" height="77"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtQ-pa-yZx">
+                                                <rect key="frame" x="10" y="29" width="300" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="NFr-71-RiZ"/>
+                                                    <constraint firstAttribute="height" constant="50" id="oqR-bm-ZHV"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Сбросить" cornerStyle="dynamic">
                                                     <backgroundConfiguration key="background" cornerRadius="20">
                                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                                     </backgroundConfiguration>
-                                                    <fontDescription key="titleFontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
+                                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.99981945750000001" green="0.97645872830000002" blue="0.94370281700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="CtQ-pa-yZx" firstAttribute="centerX" secondItem="CxQ-Mc-E75" secondAttribute="centerX" id="24j-nE-1yB"/>
-                                            <constraint firstItem="CtQ-pa-yZx" firstAttribute="centerY" secondItem="CxQ-Mc-E75" secondAttribute="centerY" id="4NQ-t4-6ka"/>
-                                        </constraints>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="rvh-q3-glU" firstAttribute="top" secondItem="d6f-nw-CY1" secondAttribute="top" id="XxN-Ec-jpy"/>
+                                    <constraint firstItem="rvh-q3-glU" firstAttribute="centerX" secondItem="d6f-nw-CY1" secondAttribute="centerX" id="sJc-mD-OwT"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aJ1-sP-J7K"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99981945750000001" green="0.97645872830000002" blue="0.94370281700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <constraints>
-                            <constraint firstItem="IWO-Ji-TDf" firstAttribute="top" secondItem="aJ1-sP-J7K" secondAttribute="top" id="AO9-Qa-kLt"/>
-                            <constraint firstItem="IWO-Ji-TDf" firstAttribute="leading" secondItem="aJ1-sP-J7K" secondAttribute="leading" id="KfX-2P-jek"/>
-                            <constraint firstItem="IWO-Ji-TDf" firstAttribute="trailing" secondItem="aJ1-sP-J7K" secondAttribute="trailing" id="cdk-DJ-5Xn"/>
-                            <constraint firstItem="IWO-Ji-TDf" firstAttribute="bottom" secondItem="aJ1-sP-J7K" secondAttribute="bottom" id="pdx-Dz-4P8"/>
+                            <constraint firstItem="d6f-nw-CY1" firstAttribute="trailing" secondItem="aJ1-sP-J7K" secondAttribute="trailing" id="65h-Y2-ASF"/>
+                            <constraint firstItem="d6f-nw-CY1" firstAttribute="leading" secondItem="aJ1-sP-J7K" secondAttribute="leading" id="AQ9-is-MtN"/>
+                            <constraint firstItem="d6f-nw-CY1" firstAttribute="top" secondItem="aJ1-sP-J7K" secondAttribute="top" id="GTw-We-mAh"/>
+                            <constraint firstAttribute="bottom" secondItem="d6f-nw-CY1" secondAttribute="bottom" id="ZQ4-Dd-beS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jPV-3n-AhP"/>
@@ -532,7 +581,7 @@ Alias: Скажи иначе
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCm-Wy-Wj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2542.0289855072465" y="69.642857142857139"/>
+            <point key="canvasLocation" x="2540.625" y="68.661971830985919"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="THy-zS-TGw">
@@ -558,11 +607,26 @@ Alias: Скажи иначе
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
