@@ -10,11 +10,19 @@
 		117E98A8288FFD6B00150694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E98A7288FFD6B00150694 /* AppDelegate.swift */; };
 		117E98AA288FFD6B00150694 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E98A9288FFD6B00150694 /* SceneDelegate.swift */; };
 		117E98AC288FFD6B00150694 /* GreetingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117E98AB288FFD6B00150694 /* GreetingsViewController.swift */; };
-		117E98AF288FFD6B00150694 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117E98AD288FFD6B00150694 /* Main.storyboard */; };
 		117E98B1288FFD6C00150694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 117E98B0288FFD6C00150694 /* Assets.xcassets */; };
 		117E98B4288FFD6C00150694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 117E98B2288FFD6C00150694 /* LaunchScreen.storyboard */; };
+		119E3BAF2897D0D000575238 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 119E3BAD2897D0D000575238 /* Main.storyboard */; };
+		11B0B05F28940F4300356D87 /* Сategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0B05E28940F4300356D87 /* Сategories.swift */; };
+		11B0B06728941F7C00356D87 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0B06628941F7C00356D87 /* Rules.swift */; };
+		11B0B06928941FFB00356D87 /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0B06828941FFB00356D87 /* CategoryManager.swift */; };
+		11B0B06D2894288500356D87 /* JokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0B06C2894288500356D87 /* JokeData.swift */; };
+		11B0B06F289428A800356D87 /* JokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0B06E289428A800356D87 /* JokeManager.swift */; };
+		11B0B071289428C200356D87 /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B0B070289428C200356D87 /* JokeModel.swift */; };
+		5976B25D2894347000E865AE /* incorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5976B25A2894347000E865AE /* incorrect.wav */; };
+		5976B25E2894347000E865AE /* resetting.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5976B25B2894347000E865AE /* resetting.wav */; };
+		5976B25F2894347000E865AE /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5976B25C2894347000E865AE /* correct.wav */; };
 		F604A4122892C2DB00D7E867 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604A4112892C2DB00D7E867 /* GameViewController.swift */; };
-		F604A4142892C54200D7E867 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F604A4132892C54200D7E867 /* JokeViewController.swift */; };
 		F6BBF8972891572A00920FF3 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF8962891572A00920FF3 /* ChoiceViewController.swift */; };
 		F6BBF8992891577300920FF3 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF8982891577300920FF3 /* RulesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -24,12 +32,20 @@
 		117E98A7288FFD6B00150694 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		117E98A9288FFD6B00150694 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		117E98AB288FFD6B00150694 /* GreetingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingsViewController.swift; sourceTree = "<group>"; };
-		117E98AE288FFD6B00150694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		117E98B0288FFD6C00150694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		117E98B3288FFD6C00150694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		117E98B5288FFD6C00150694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		119E3BAE2897D0D000575238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11B0B05E28940F4300356D87 /* Сategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Сategories.swift"; sourceTree = "<group>"; };
+		11B0B06628941F7C00356D87 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		11B0B06828941FFB00356D87 /* CategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
+		11B0B06C2894288500356D87 /* JokeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeData.swift; sourceTree = "<group>"; };
+		11B0B06E289428A800356D87 /* JokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeManager.swift; sourceTree = "<group>"; };
+		11B0B070289428C200356D87 /* JokeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
+		5976B25A2894347000E865AE /* incorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incorrect.wav; sourceTree = "<group>"; };
+		5976B25B2894347000E865AE /* resetting.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = resetting.wav; sourceTree = "<group>"; };
+		5976B25C2894347000E865AE /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		F604A4112892C2DB00D7E867 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		F604A4132892C54200D7E867 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 		F6BBF8962891572A00920FF3 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		F6BBF8982891577300920FF3 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				117E98A6288FFD6B00150694 /* Alias */,
+				5976B2592894346300E865AE /* Sounds */,
 				117E98A5288FFD6B00150694 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,7 +96,7 @@
 		117E98BB288FFD7900150694 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				117E98AD288FFD6B00150694 /* Main.storyboard */,
+				119E3BAD2897D0D000575238 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -91,7 +108,6 @@
 				F6BBF8962891572A00920FF3 /* ChoiceViewController.swift */,
 				F604A4112892C2DB00D7E867 /* GameViewController.swift */,
 				F6BBF8982891577300920FF3 /* RulesViewController.swift */,
-				F604A4132892C54200D7E867 /* JokeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -99,8 +115,24 @@
 		117E98BD288FFDA300150694 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				11B0B06C2894288500356D87 /* JokeData.swift */,
+				11B0B06E289428A800356D87 /* JokeManager.swift */,
+				11B0B070289428C200356D87 /* JokeModel.swift */,
+				11B0B05E28940F4300356D87 /* Сategories.swift */,
+				11B0B06828941FFB00356D87 /* CategoryManager.swift */,
+				11B0B06628941F7C00356D87 /* Rules.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5976B2592894346300E865AE /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5976B25C2894347000E865AE /* correct.wav */,
+				5976B25A2894347000E865AE /* incorrect.wav */,
+				5976B25B2894347000E865AE /* resetting.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,7 +195,10 @@
 			files = (
 				117E98B4288FFD6C00150694 /* LaunchScreen.storyboard in Resources */,
 				117E98B1288FFD6C00150694 /* Assets.xcassets in Resources */,
-				117E98AF288FFD6B00150694 /* Main.storyboard in Resources */,
+				5976B25E2894347000E865AE /* resetting.wav in Resources */,
+				119E3BAF2897D0D000575238 /* Main.storyboard in Resources */,
+				5976B25D2894347000E865AE /* incorrect.wav in Resources */,
+				5976B25F2894347000E865AE /* correct.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,9 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B0B05F28940F4300356D87 /* Сategories.swift in Sources */,
 				F6BBF8992891577300920FF3 /* RulesViewController.swift in Sources */,
-				F604A4142892C54200D7E867 /* JokeViewController.swift in Sources */,
+				11B0B071289428C200356D87 /* JokeModel.swift in Sources */,
+				11B0B06D2894288500356D87 /* JokeData.swift in Sources */,
+				11B0B06728941F7C00356D87 /* Rules.swift in Sources */,
+				11B0B06F289428A800356D87 /* JokeManager.swift in Sources */,
 				117E98AC288FFD6B00150694 /* GreetingsViewController.swift in Sources */,
+				11B0B06928941FFB00356D87 /* CategoryManager.swift in Sources */,
 				117E98A8288FFD6B00150694 /* AppDelegate.swift in Sources */,
 				117E98AA288FFD6B00150694 /* SceneDelegate.swift in Sources */,
 				F604A4122892C2DB00D7E867 /* GameViewController.swift in Sources */,
@@ -187,20 +227,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		117E98AD288FFD6B00150694 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				117E98AE288FFD6B00150694 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		117E98B2288FFD6C00150694 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				117E98B3288FFD6C00150694 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		119E3BAD2897D0D000575238 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				119E3BAE2897D0D000575238 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

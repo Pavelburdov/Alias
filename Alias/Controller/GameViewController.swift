@@ -6,15 +6,21 @@
 //
 
 import UIKit
+import AVFoundation
+
 
 class GameViewController: UIViewController {
 
-
+    var score = 0
     var secondReminder = 60
     var timer = Timer()
+    var player: AVAudioPlayer!
+
 
     @IBOutlet weak var secondLabel: UILabel!
-
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
@@ -37,24 +43,60 @@ class GameViewController: UIViewController {
         let seconds: Int = totalSeconds % 60
         return String(format: "0:%02d", seconds)
     }
+    
+    
+    func timerRestart() {
+        secondReminder = 61
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         startTimer()
+        scoreLabel.text = "Score is \(score)"
+        
         // Do any additional setup after loading the view.
     }
-    
-    
-    
-    /*
-     // MARK: - Navigation
 
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+// Используется при выходе с экрана
+    override func viewDidDisappear(_: Bool) {
+        super.viewDidDisappear(true)
+        timer.invalidate()
+    }
+    
+    @IBAction func correctButtonPressed(_ sender: UIButton) {
+        score += 1
+        scoreLabel.text = "Score is \(score)"
+        playSound(soundName: "correct")
+        timerRestart()
+
+    }
+    
+    @IBAction func skipButtonPressed(_ sender: UIButton) {
+        score -= 1
+        scoreLabel.text = "Score is \(score)"
+        playSound(soundName: "incorrect")
+        timerRestart()
+
+    }
+    
+    @IBAction func resetButtonPressed(_ sender: UIButton) {
+        score = 1
+        scoreLabel.text = "Score is \(score)"
+        playSound(soundName: "resetting")
+        timerRestart()
+
+    }
+    
+    func playSound(soundName: String) {
+        let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
+        if let urlUnwrapped = url {
+            player = try! AVAudioPlayer(contentsOf: urlUnwrapped)
+        } else {
+            print("Can`t unwrap url")
+        }
+        player.play()
+    }
 
 }

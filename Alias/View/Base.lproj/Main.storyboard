@@ -518,6 +518,9 @@ Alias: Скажи иначе
                                                             <attributedString key="attributedSubtitle"/>
                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="skipButtonPressed:" destination="ZBQ-7G-vIX" eventType="touchUpInside" id="qrN-89-m2C"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PnO-5t-MCU" userLabel="Correct">
                                                         <rect key="frame" x="0.0" y="80" width="300" height="50"/>
@@ -533,6 +536,9 @@ Alias: Скажи иначе
                                                             <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="correctButtonPressed:" destination="ZBQ-7G-vIX" eventType="touchUpInside" id="TCu-rl-33S"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -559,6 +565,9 @@ Alias: Скажи иначе
                                                     <fontDescription key="titleFontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="30"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="resetButtonPressed:" destination="ZBQ-7G-vIX" eventType="touchUpInside" id="q2A-Id-lbv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -586,6 +595,7 @@ Alias: Скажи иначе
                     </view>
                     <navigationItem key="navigationItem" id="jPV-3n-AhP"/>
                     <connections>
+                        <outlet property="scoreLabel" destination="dRI-uL-cii" id="xgo-Hc-hLT"/>
                         <outlet property="secondLabel" destination="yJf-5v-Vf9" id="0R8-12-sWi"/>
                     </connections>
                 </viewController>
