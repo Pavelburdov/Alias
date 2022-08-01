@@ -611,6 +611,7 @@ Alias: Скажи иначе
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N35-d6-KQ2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemRedColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

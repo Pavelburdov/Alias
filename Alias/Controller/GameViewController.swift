@@ -11,16 +11,14 @@ import AVFoundation
 
 class GameViewController: UIViewController {
 
-    var score = 0
+    @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var wordLabel: UILabel!
+    
+    var score: Int = 0
     var secondReminder = 60
     var timer = Timer()
     var player: AVAudioPlayer!
-
-
-    @IBOutlet weak var secondLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    
-    @IBOutlet weak var wordLabel: UILabel!
     
     var categoryManager: CategoryManager?
     var wordCouner = 0
@@ -75,7 +73,6 @@ class GameViewController: UIViewController {
         actionIndex = Int.random(in: 1...10)
         startTimer()
         updateUI()
-        
     }
     
     // Используется при выходе с экрана
@@ -85,7 +82,6 @@ class GameViewController: UIViewController {
     }
     
     private func updateUI() {
-        
         wordCouner += 1
         scoreLabel.text = "Очки: \(score)"
         
@@ -103,15 +99,19 @@ class GameViewController: UIViewController {
         updateUI()
         playSound(soundName: "correct")
         timerRestart()
-
+        
     }
     
     @IBAction func skipButtonPressed(_ sender: UIButton) {
-        score -= 1
+        if score <= 0 { score = 0 }
+        if wordCouner != actionIndex && score >= 1 { score -= 1 }
+        if wordCouner == actionIndex && score <= 0 { score = 0 }
+        if wordCouner == actionIndex && score >= 3 { score -= 3 }
+        if wordCouner == actionIndex && score == 2 { score -= 2 }
+        if wordCouner == actionIndex && score == 1 { score -= 1 }
         updateUI()
         playSound(soundName: "incorrect")
         timerRestart()
-
     }
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
@@ -121,13 +121,12 @@ class GameViewController: UIViewController {
         updateUI()
         playSound(soundName: "resetting")
         timerRestart()
-    }
-    
-    private func finishRound() {
         
+    }
+  
+    private func finishRound() {
         timer.invalidate()
         showAlertButtonPressed()
-//        self.jokeManager.fetchData()
     }
     
     func playSound(soundName: String) {
@@ -139,23 +138,18 @@ class GameViewController: UIViewController {
         }
         player.play()
     }
-
+    
 }
 
 extension GameViewController: JokeManagerDelegate {
     func didGetJoke(jokeModel: JokeModel) {
         DispatchQueue.main.async {
-            
             self.question = jokeModel.text
             self.answer = jokeModel.answer
-            
         }
-        
     }
     
     func didFailWithError(error: Error) {
         print(error.localizedDescription)
     }
-    
-    
 }
