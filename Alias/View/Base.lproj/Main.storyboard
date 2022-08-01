@@ -478,17 +478,11 @@ Alias: Скажи иначе
                                         <rect key="frame" x="0.0" y="228" width="320" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Stu-HN-pgq">
-                                                <rect key="frame" x="93.5" y="14" width="133.5" height="22.5"/>
+                                                <rect key="frame" x="120" y="16.5" width="80.5" height="17"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Всего очков:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRI-uL-cii" userLabel="Total scores">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="22.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="17"/>
                                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="15"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htz-Sg-HWd" userLabel="Points">
-                                                        <rect key="frame" x="84.5" y="0.0" width="49" height="22.5"/>
-                                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>

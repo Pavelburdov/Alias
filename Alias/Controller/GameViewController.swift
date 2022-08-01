@@ -78,7 +78,7 @@ class GameViewController: UIViewController {
     private func updateUI() {
         
         wordCouner += 1
-        scoreLabel.text = "Score is \(score)"
+        scoreLabel.text = "Очки: \(score)"
         
         if wordCouner > 10 {
             wordLabel.text = "КОНЕЦ"
