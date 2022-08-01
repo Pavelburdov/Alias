@@ -22,14 +22,15 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var wordLabel: UILabel!
     
-    var categoryManager: CategoryManager? 
+    var categoryManager: CategoryManager?
+    var wordCouner = 0
+    var actionIndex = 0
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
 
     @objc func updateTime() {
-//        print(timeFormatted(secondReminder))
         if secondReminder != 0 {
             secondReminder -= 1
             secondLabel.text = "\(secondReminder)"
@@ -38,7 +39,9 @@ class GameViewController: UIViewController {
         }
 
         func endTimer() {
-            timer.invalidate()
+            timerRestart()
+            updateUI()
+            score -= 1
         }
     }
 
@@ -54,7 +57,7 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        actionIndex = Int.random(in: 1...10)
         startTimer()
         updateUI()
     }
@@ -66,11 +69,20 @@ class GameViewController: UIViewController {
     }
     
     private func updateUI() {
+        
+        wordCouner += 1
         scoreLabel.text = "Score is \(score)"
-        wordLabel.text = categoryManager?.nextWord
+        
+        if wordCouner > 10 {
+            wordLabel.text = "КОНЕЦ"
+            finishRound()
+            return
+        }
+        wordLabel.text = (wordCouner == actionIndex) ? "ДЕЙСТВИЕ" : categoryManager?.nextWord
     }
     
     @IBAction func correctButtonPressed(_ sender: UIButton) {
+        if wordCouner == actionIndex { score += 2 }
         score += 1
         updateUI()
         playSound(soundName: "correct")
@@ -87,11 +99,18 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
-        score = 1
+        score = 0
+        wordCouner = 0
+        actionIndex = Int.random(in: 1...10)
         updateUI()
         playSound(soundName: "resetting")
         timerRestart()
-
+    }
+    
+    private func finishRound() {
+        
+        timer.invalidate()
+        // Сюда нужен алерт!
     }
     
     func playSound(soundName: String) {

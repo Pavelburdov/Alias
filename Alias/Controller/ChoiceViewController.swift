@@ -42,7 +42,6 @@ class ChoiceViewController: UIViewController {
             guard let destinationVC = segue.destination as? GameViewController else { return }
             guard let category = category else { return }
             destinationVC.categoryManager = CategoryManager(category: category)
-            print(category.title)
         }
 }
 
