@@ -272,17 +272,17 @@ Alias: Скажи иначе
             <objects>
                 <viewController id="aZJ-0W-o10" userLabel="Choice View Controller" customClass="ChoiceViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S4u-a9-9sG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hfS-UC-U24" userLabel="Main Stack View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttK-nb-qAN" userLabel="TopView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="166"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="На какую тему выберите слова?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqA-31-Rus" userLabel="Question Text View">
-                                                <rect key="frame" x="10" y="49.5" width="300" height="91"/>
+                                                <rect key="frame" x="10" y="37.5" width="300" height="91"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="91" id="MAC-a8-NHf"/>
                                                 </constraints>
@@ -298,7 +298,7 @@ Alias: Скажи иначе
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiY-69-9VN" userLabel="ButtomView">
-                                        <rect key="frame" x="0.0" y="198" width="320" height="350"/>
+                                        <rect key="frame" x="0.0" y="174" width="320" height="350"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hXC-Mq-u2V" userLabel="Buttom Stack View">
                                                 <rect key="frame" x="10" y="30" width="300" height="290"/>
@@ -424,11 +424,11 @@ Alias: Скажи иначе
             <objects>
                 <viewController id="ZBQ-7G-vIX" userLabel="Game View Controller" customClass="GameViewController" customModule="Alias" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nh5-Dy-KKa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-nw-CY1">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvh-q3-glU" userLabel="TimerView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
@@ -459,10 +459,10 @@ Alias: Скажи иначе
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urB-u7-6QV" userLabel="WordView">
-                                        <rect key="frame" x="0.0" y="118" width="320" height="126"/>
+                                        <rect key="frame" x="0.0" y="118" width="320" height="102"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdW-If-knH" userLabel="Word">
-                                                <rect key="frame" x="107.5" y="41" width="105.5" height="44.5"/>
+                                                <rect key="frame" x="107.5" y="29" width="105.5" height="44.5"/>
                                                 <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="40"/>
                                                 <color key="textColor" red="0.99797862768173218" green="0.035748671740293503" blue="0.035785406827926636" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -475,7 +475,7 @@ Alias: Скажи иначе
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Go-Jk-E53" userLabel="Points View">
-                                        <rect key="frame" x="0.0" y="252" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="228" width="320" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Stu-HN-pgq">
                                                 <rect key="frame" x="120" y="16.5" width="80.5" height="17"/>
@@ -496,7 +496,7 @@ Alias: Скажи иначе
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-WP-8k8" userLabel="AnswerView">
-                                        <rect key="frame" x="0.0" y="310" width="320" height="150"/>
+                                        <rect key="frame" x="0.0" y="286" width="320" height="150"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uXn-NQ-z2v">
                                                 <rect key="frame" x="10" y="10" width="300" height="130"/>
@@ -548,7 +548,7 @@ Alias: Скажи иначе
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CxQ-Mc-E75" userLabel="CancelView">
-                                        <rect key="frame" x="0.0" y="468" width="320" height="80"/>
+                                        <rect key="frame" x="0.0" y="444" width="320" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtQ-pa-yZx" userLabel="Cancel">
                                                 <rect key="frame" x="10" y="16.5" width="300" height="47.5"/>
@@ -596,7 +596,6 @@ Alias: Скажи иначе
                         <outlet property="scoreLabel" destination="dRI-uL-cii" id="xgo-Hc-hLT"/>
                         <outlet property="secondLabel" destination="yJf-5v-Vf9" id="0R8-12-sWi"/>
                         <outlet property="wordLabel" destination="ZdW-If-knH" id="lFZ-m9-NA3"/>
-                        <segue destination="aZJ-0W-o10" kind="show" identifier="gameToChoice" id="yJx-6m-0sV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCm-Wy-Wj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -623,9 +622,6 @@ Alias: Скажи иначе
             <point key="canvasLocation" x="27.536231884057973" y="68.973214285714278"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="yJx-6m-0sV"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="pict1" width="341" height="341"/>
         <systemColor name="labelColor">

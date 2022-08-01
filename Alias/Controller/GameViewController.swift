@@ -61,7 +61,7 @@ class GameViewController: UIViewController {
     private func showAlertButtonPressed(){
         let alert = UIAlertController(title: question, message: answer, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in
-            self.performSegue(withIdentifier: "gameToChoice", sender: self)
+            self.navigationController?.popToRootViewController(animated: true)
         })
         self.present(alert, animated: true, completion: nil)
     }
