@@ -55,6 +55,13 @@ class GameViewController: UIViewController {
         secondReminder = 61
     }
 
+    // create the alert
+    private func showAlertButtonPressed(){
+        let alert = UIAlertController(title: "ВНИМАНИЕ", message: "Ваш игра закончилась", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         actionIndex = Int.random(in: 1...10)
@@ -62,7 +69,7 @@ class GameViewController: UIViewController {
         updateUI()
     }
     
-// Используется при выходе с экрана
+    // Используется при выходе с экрана
     override func viewDidDisappear(_: Bool) {
         super.viewDidDisappear(true)
         timer.invalidate()
@@ -110,7 +117,7 @@ class GameViewController: UIViewController {
     private func finishRound() {
         
         timer.invalidate()
-        // Сюда нужен алерт!
+        showAlertButtonPressed()
     }
     
     func playSound(soundName: String) {
