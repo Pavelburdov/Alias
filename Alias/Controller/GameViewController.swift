@@ -26,6 +26,8 @@ class GameViewController: UIViewController {
     var wordCouner = 0
     var actionIndex = 0
     
+    var jokeManager = JokeManager()
+    
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
@@ -58,12 +60,15 @@ class GameViewController: UIViewController {
     // create the alert
     private func showAlertButtonPressed(){
         let alert = UIAlertController(title: "ВНИМАНИЕ", message: "Ваш игра закончилась", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in
+            self.jokeManager.fetchData()
+        })
         self.present(alert, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        jokeManager.delegate = self
         actionIndex = Int.random(in: 1...10)
         startTimer()
         updateUI()
@@ -118,6 +123,7 @@ class GameViewController: UIViewController {
         
         timer.invalidate()
         showAlertButtonPressed()
+//        self.jokeManager.fetchData()
     }
     
     func playSound(soundName: String) {
@@ -130,4 +136,23 @@ class GameViewController: UIViewController {
         player.play()
     }
 
+}
+
+extension GameViewController: JokeManagerDelegate {
+    func didGetJoke(jokeModel: JokeModel) {
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: jokeModel.text, message: jokeModel.answer, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                self.navigationController?.popToRootViewController(animated: true)
+            }))
+            self.present(alert, animated: true)
+        }
+        
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error.localizedDescription)
+    }
+    
+    
 }
