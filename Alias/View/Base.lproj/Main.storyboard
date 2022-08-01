@@ -408,6 +408,7 @@ Alias: Скажи иначе
                     </view>
                     <navigationItem key="navigationItem" id="Hi1-B1-6wD"/>
                     <connections>
+                        <outlet property="buttonChoiceOne" destination="CfE-9n-BG0" id="sWW-b4-l6m"/>
                         <segue destination="ZBQ-7G-vIX" kind="show" identifier="goToChoice" id="z3e-h9-KdO"/>
                     </connections>
                 </viewController>
