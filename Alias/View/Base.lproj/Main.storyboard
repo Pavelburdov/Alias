@@ -408,7 +408,10 @@ Alias: Скажи иначе
                     </view>
                     <navigationItem key="navigationItem" id="Hi1-B1-6wD"/>
                     <connections>
-                        <outlet property="buttonChoiceOne" destination="CfE-9n-BG0" id="sWW-b4-l6m"/>
+                        <outlet property="buttonChoiceFirst" destination="CfE-9n-BG0" id="i9m-YU-Sad"/>
+                        <outlet property="buttonChoiceFour" destination="KZW-Iy-G55" id="2hu-Pd-vgI"/>
+                        <outlet property="buttonChoiceSecond" destination="m6R-cW-s2X" id="wrK-7V-RjU"/>
+                        <outlet property="buttonChoiceThird" destination="8ow-41-WNV" id="8yI-nV-Qyc"/>
                         <segue destination="ZBQ-7G-vIX" kind="show" identifier="goToChoice" id="z3e-h9-KdO"/>
                     </connections>
                 </viewController>

@@ -11,9 +11,17 @@ class ChoiceViewController: UIViewController {
     
     var category: Category?
     
+    @IBOutlet var buttonChoiceFirst: UIButton!
+    @IBOutlet var buttonChoiceSecond: UIButton!
+    @IBOutlet var buttonChoiceThird: UIButton!
+    @IBOutlet var buttonChoiceFour: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        buttonChoiceFirst.titleLabel?.text = Category.categories[0].title
+        buttonChoiceSecond.titleLabel?.text = Category.categories[1].title
+        buttonChoiceThird.titleLabel?.text = Category.categories[2].title
+        buttonChoiceFour.titleLabel?.text = Category.categories[3].title
         // Do any additional setup after loading the view.
     }
     
