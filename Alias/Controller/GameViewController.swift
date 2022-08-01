@@ -20,13 +20,16 @@ class GameViewController: UIViewController {
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    @IBOutlet weak var wordLabel: UILabel!
+    
+    var categoryManager: CategoryManager? 
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
 
     @objc func updateTime() {
-        print(timeFormatted(secondReminder))
+//        print(timeFormatted(secondReminder))
         if secondReminder != 0 {
             secondReminder -= 1
             secondLabel.text = "\(secondReminder)"
@@ -53,11 +56,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
 
         startTimer()
-        scoreLabel.text = "Score is \(score)"
-        
-        // Do any additional setup after loading the view.
+        updateUI()
     }
-
     
 // Используется при выходе с экрана
     override func viewDidDisappear(_: Bool) {
@@ -65,9 +65,14 @@ class GameViewController: UIViewController {
         timer.invalidate()
     }
     
+    private func updateUI() {
+        scoreLabel.text = "Score is \(score)"
+        wordLabel.text = categoryManager?.nextWord
+    }
+    
     @IBAction func correctButtonPressed(_ sender: UIButton) {
         score += 1
-        scoreLabel.text = "Score is \(score)"
+        updateUI()
         playSound(soundName: "correct")
         timerRestart()
 
@@ -75,7 +80,7 @@ class GameViewController: UIViewController {
     
     @IBAction func skipButtonPressed(_ sender: UIButton) {
         score -= 1
-        scoreLabel.text = "Score is \(score)"
+        updateUI()
         playSound(soundName: "incorrect")
         timerRestart()
 
@@ -83,7 +88,7 @@ class GameViewController: UIViewController {
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
         score = 1
-        scoreLabel.text = "Score is \(score)"
+        updateUI()
         playSound(soundName: "resetting")
         timerRestart()
 

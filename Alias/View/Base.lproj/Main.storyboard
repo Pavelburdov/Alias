@@ -597,6 +597,7 @@ Alias: Скажи иначе
                     <connections>
                         <outlet property="scoreLabel" destination="dRI-uL-cii" id="xgo-Hc-hLT"/>
                         <outlet property="secondLabel" destination="yJf-5v-Vf9" id="0R8-12-sWi"/>
+                        <outlet property="wordLabel" destination="ZdW-If-knH" id="lFZ-m9-NA3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCm-Wy-Wj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

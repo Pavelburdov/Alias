@@ -40,7 +40,7 @@ struct Category {
 
 extension Category {
     
-    static let Categories: [Category] =  [
+    static let categories: [Category] =  [
         Category(title: "Музыка",
         words: ["музыка", "песня", "клип", "компакт-диск", "гитара", "струна", "нота", "голос", "композиция", "аккомпонимент", "дерижер", "оркестр", "консерватория", "камертон", "музыковед", "кселофон", "медиатор"]),
     
