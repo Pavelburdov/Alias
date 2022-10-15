@@ -1,10 +1,3 @@
-//
-//  GameViewController.swift
-//  Alias
-//
-//  Created by Pavel on 28.07.2022.
-//
-
 import UIKit
 import AVFoundation
 
@@ -15,56 +8,18 @@ class GameViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var wordLabel: UILabel!
     
-    var score: Int = 0
-    var secondReminder = 60
-    var timer = Timer()
-    var player: AVAudioPlayer!
-    
     var categoryManager: CategoryManager?
-    var wordCouner = 0
-    var actionIndex = 0
     
-    var jokeManager = JokeManager()
-    var question = ""
-    var answer = ""
+    private var player: AVAudioPlayer!
     
-    func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-    }
-
-    @objc func updateTime() {
-        if secondReminder != 0 {
-            secondReminder -= 1
-            secondLabel.text = "\(secondReminder)"
-        } else {
-            endTimer()
-        }
-
-        func endTimer() {
-            timerRestart()
-            updateUI()
-            score -= 1
-        }
-    }
-
-    func timeFormatted(_ totalSeconds: Int) -> String {
-        let seconds: Int = totalSeconds % 60
-        return String(format: "0:%02d", seconds)
-    }
-    
-    
-    func timerRestart() {
-        secondReminder = 61
-    }
-
-    // create the alert
-    private func showAlertButtonPressed(){
-        let alert = UIAlertController(title: question, message: answer, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in
-            self.navigationController?.popToRootViewController(animated: true)
-        })
-        self.present(alert, animated: true, completion: nil)
-    }
+    private lazy var jokeManager = JokeManager()
+    private lazy var wordCouner = 0
+    private lazy var actionIndex = 0
+    private lazy var score: Int = 0
+    private lazy var secondReminder = 60
+    private lazy var timer = Timer()
+    private lazy var question = ""
+    private lazy var answer = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,22 +30,9 @@ class GameViewController: UIViewController {
         updateUI()
     }
     
-    // Используется при выходе с экрана
     override func viewDidDisappear(_: Bool) {
         super.viewDidDisappear(true)
         timer.invalidate()
-    }
-    
-    private func updateUI() {
-        wordCouner += 1
-        scoreLabel.text = "Очки: \(score)"
-        
-        if wordCouner > 10 {
-            wordLabel.text = "КОНЕЦ"
-            finishRound()
-            return
-        }
-        wordLabel.text = (wordCouner == actionIndex) ? "ДЕЙСТВИЕ" : categoryManager?.nextWord
     }
     
     @IBAction func correctButtonPressed(_ sender: UIButton) {
@@ -123,8 +65,72 @@ class GameViewController: UIViewController {
         timerRestart()
         
     }
-  
-    private func finishRound() {
+}
+
+// MARK: - JokeManagerDelegate
+
+extension GameViewController: JokeManagerDelegate {
+    
+    func didGetJoke(jokeModel: JokeModel) {
+        DispatchQueue.main.async {
+            self.question = jokeModel.text
+            self.answer = jokeModel.answer
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error.localizedDescription)
+    }
+}
+
+// MARK: - Actions
+
+@objc
+private extension GameViewController {
+    
+    func updateTime() {
+        if secondReminder != 0 {
+            secondReminder -= 1
+            secondLabel.text = "\(secondReminder)"
+        } else {
+            endTimer()
+        }
+
+        func endTimer() {
+            timerRestart()
+            updateUI()
+            score -= 1
+        }
+    }
+}
+
+// MARK: - Private Methods
+
+private extension GameViewController {
+    
+    func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+    }
+
+    func timeFormatted(_ totalSeconds: Int) -> String {
+        let seconds: Int = totalSeconds % 60
+        return String(format: "0:%02d", seconds)
+    }
+    
+    
+    func timerRestart() {
+        secondReminder = 61
+    }
+
+    func showAlertButtonPressed(){
+        let alert = UIAlertController(title: question, message: answer, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {_ in
+            self.navigationController?.popToRootViewController(animated: true)
+        })
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func finishRound() {
         timer.invalidate()
         showAlertButtonPressed()
     }
@@ -139,17 +145,15 @@ class GameViewController: UIViewController {
         player.play()
     }
     
-}
-
-extension GameViewController: JokeManagerDelegate {
-    func didGetJoke(jokeModel: JokeModel) {
-        DispatchQueue.main.async {
-            self.question = jokeModel.text
-            self.answer = jokeModel.answer
+    func updateUI() {
+        wordCouner += 1
+        scoreLabel.text = "Очки: \(score)"
+        
+        if wordCouner > 10 {
+            wordLabel.text = "КОНЕЦ"
+            finishRound()
+            return
         }
-    }
-    
-    func didFailWithError(error: Error) {
-        print(error.localizedDescription)
+        wordLabel.text = (wordCouner == actionIndex) ? "ДЕЙСТВИЕ" : categoryManager?.nextWord
     }
 }
