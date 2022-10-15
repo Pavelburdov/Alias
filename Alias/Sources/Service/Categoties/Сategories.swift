@@ -1,13 +1,7 @@
-//
-//  Сategories.swift
-//  Alias
-//
-//  Created by Андрей Кузнецов on 28.07.2022.
-//
-
 import Foundation
 
 struct Category {
+    
     let title: String
     let words: [String]
     

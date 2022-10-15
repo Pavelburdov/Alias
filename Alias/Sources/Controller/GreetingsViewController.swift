@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Alias
-//
-//  Created by Nikita Rekaev on 26.07.2022.
-//
-
 import UIKit
 
 class GreetingsViewController: UIViewController {
@@ -28,13 +21,5 @@ class GreetingsViewController: UIViewController {
 
         performSegue(withIdentifier: "goToRules", sender: self)
     }
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goToRules" {
-//            let destinationVC = segue.destination as! RulesViewController
-//            destinationVC.rules =
-//
-//        }
-//    }
 }
 
