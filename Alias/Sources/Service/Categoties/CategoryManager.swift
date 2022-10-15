@@ -1,14 +1,9 @@
-//
-//  CategoryManager.swift
-//  Alias
-//
-//  Created by Андрей Кузнецов on 29.07.2022.
-//
 import Foundation
 
 class CategoryManager {
     
     let categoryTitle: String
+    
     private var wordsArray: [String]
     private var range: Int
     
