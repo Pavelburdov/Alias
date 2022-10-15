@@ -1,9 +1,3 @@
-//
-//  Rules.swift
-//  Alias - iOS13
-//
-//  Created by Андрей Кузнецов on 28.07.2022.
-//
 import Foundation
 
 struct Rules {
