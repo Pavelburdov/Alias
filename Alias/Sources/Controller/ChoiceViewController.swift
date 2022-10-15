@@ -1,10 +1,3 @@
-//
-//  ChoiceViewController.swift
-//  Alias
-//
-//  Created by Pavel on 27.07.2022.
-//
-
 import UIKit
 
 class ChoiceViewController: UIViewController {
@@ -22,7 +15,6 @@ class ChoiceViewController: UIViewController {
         buttonChoiceSecond.titleLabel?.text = Category.categories[1].title
         buttonChoiceThird.titleLabel?.text = Category.categories[2].title
         buttonChoiceFour.titleLabel?.text = Category.categories[3].title
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func choiceOne(_ sender: UIButton) {
@@ -52,4 +44,3 @@ class ChoiceViewController: UIViewController {
             destinationVC.categoryManager = CategoryManager(category: category)
         }
 }
-
