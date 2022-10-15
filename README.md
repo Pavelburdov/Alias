@@ -6,6 +6,7 @@
 - <a href="https://github.com/drewkuznetsov">Andrew</a>
 - <a href="https://github.com/Pavelburdov">Pavel</a>
 - <a href="https://github.com/myIDDQD">Evgeniy</a>
+- <a href="https://github.com/NikitaRekaev">Nikita</a>
 
 ## Overview
 
